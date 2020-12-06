@@ -1,7 +1,6 @@
 //import React, { Component, useEffect, useState } from 'react';
-import Card from './components/Display';
 import "./App.css";
-import axios from 'axios';
+//import axios from 'axios';
 import GlobalCase from './components/Country'
 import Indo from './components/Indonesia';
 import Prov from './components/Provinsi';
@@ -25,10 +24,10 @@ const App = ()=> {
         <li>Provinsi</li>
         </Link>
       </ul>
-
       </nav>
+
       <Switch>
-      <Route path="/" component={Home}/>
+      <Route path="/" exact component={GlobalCase}/>
       <Route path="/Indonesia" component={Indo}/>
       <Route path="/Provinsi" component={Prov}/>
       </Switch>
@@ -40,13 +39,13 @@ const App = ()=> {
 
 }
 
-const Home = ()=> {
-  return (
-    <div >
-    <GlobalCase/>
-    </div>
-  );
+// const Home = ()=> {
+//   return (
+//     <div >
+//     <GlobalCase/>
+//     </div>
+//   );
 
-};
+// };
 
 export default App;
