@@ -1,67 +1,52 @@
-import React, { Component, useEffect, useState } from 'react';
+//import React, { Component, useEffect, useState } from 'react';
 import Card from './components/Display';
 import "./App.css";
 import axios from 'axios';
 import GlobalCase from './components/Country'
-//import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
-
-// class App extends Component{
-
-// state={
-//   users :[],
-// }
-
-//   componentDidMount(){
-//   //   fetch('https://jsonplaceholder.typicode.com/users')
-//   // .then(response => response.json())
-//   // .then(json => this.setState({users:json}));
-//   axios
-//     .get("https://jsonplaceholder.typicode.com/users")
-//     .then((response) => this.setState({users:response.data}));
-//   }
-
-  
-//   render(){
-//     return(
-//       <>
-//       {
-//         this.state.users.map((item)=>{
-//           return(
-//             <Card name={item.name} username={item.username} email={item.email} phone={item.phone}/>
-//           )
-//         })
-//       }
-//       </>
-//     )
-//   }
-// }
+import Indo from './components/Indonesia';
+import Prov from './components/Provinsi';
+import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
 
 
-//Functional// 
 const App = ()=> {
-// const [confirmed, setConfirmed]= useState([]);
-// const [recovered, setRecovered]= useState([]);
-// const [death, setDeath]=useState([]);
-
-// useEffect(() => {
-//   axios
-//     .get("https://covid19.mathdro.id/api")
-//     .then((response) => {
-//       setConfirmed(response.data.confirmed.value)
-//       setRecovered(response.data.recovered.value)
-//       setDeath(response.data.deaths.value)
-//     });
-        
-  
-// }, []);
-  //console.log(global);
   return (
-    <div className="App">
-    <h1>Covid19 Tracker</h1>
+    <Router>
+    <div className="App" >
+      <nav>
+      <h1>Covid19 Tracker</h1>
+      <ul>
+        <Link to="/">
+        <li>Global</li>
+        </Link>
+        <Link to="/Indonesia">
+        <li>Indonesia</li>
+        </Link>
+        <Link to="/Provinsi">
+        <li>Provinsi</li>
+        </Link>
+      </ul>
+
+      </nav>
+      <Switch>
+      <Route path="/" component={Home}/>
+      <Route path="/Indonesia" component={Indo}/>
+      <Route path="/Provinsi" component={Prov}/>
+      </Switch>
+    </div>
+    </Router>
+  );
+
+  
+
+}
+
+const Home = ()=> {
+  return (
+    <div >
     <GlobalCase/>
     </div>
   );
-    
-  
-  };
+
+};
+
 export default App;

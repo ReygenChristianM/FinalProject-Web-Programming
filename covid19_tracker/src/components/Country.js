@@ -13,8 +13,7 @@ useEffect(() => {
       setConfirmed(response.data.confirmed.value)
       setRecovered(response.data.recovered.value)
       setDeath(response.data.deaths.value)
-    });
-        
+    });   
 }, []);
 
 return (
