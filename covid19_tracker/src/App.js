@@ -1,8 +1,8 @@
 //import React, { Component, useEffect, useState } from 'react';
 import "./App.css";
 //import axios from 'axios';
-import GlobalCase from './components/Country'
-import Indo from './components/Indonesia';
+import GlobalCase from './components/Global'
+import IndoCase from './components/Indonesia';  
 import Prov from './components/Provinsi';
 import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
 
@@ -28,7 +28,7 @@ const App = ()=> {
 
       <Switch>
       <Route path="/" exact component={GlobalCase}/>
-      <Route path="/Indonesia" component={Indo}/>
+      <Route path="/Indonesia" component={IndoCase}/>
       <Route path="/Provinsi" component={Prov}/>
       </Switch>
     </div>
@@ -38,14 +38,5 @@ const App = ()=> {
   
 
 }
-
-// const Home = ()=> {
-//   return (
-//     <div >
-//     <GlobalCase/>
-//     </div>
-//   );
-
-// };
 
 export default App;
