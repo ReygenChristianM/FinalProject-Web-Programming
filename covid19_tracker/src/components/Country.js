@@ -19,11 +19,25 @@ useEffect(() => {
 
 return (
     <>
-    <h3>Jumlah kasus Seluruh Dunia</h3>
-    
-  <p>{confirmed}</p>
-  <p>{recovered}</p>
-  <p>{death}</p>
+    <h3>Jumlah Kasus Seluruh Dunia</h3>
+   <div className="Adjust"> 
+   <div className="Card">
+    <label style={{color: "blue"}}>Positif</label>
+    <p>{confirmed}</p>
+   </div>
+   <div className="Card">
+    <label style={{color: "red"}}>Meninggal</label>
+    <p>{death}</p>
+   </div>
+   <div className="Card">
+    <label style={{color: "green"}}>Sembuh</label>
+    <p>{recovered}</p>
+   </div>
+  
+  
+  
+
+  </div>
     </>
   );
     

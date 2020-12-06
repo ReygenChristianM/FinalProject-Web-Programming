@@ -56,10 +56,10 @@ const App = ()=> {
 // }, []);
   //console.log(global);
   return (
-    <>
+    <div className="App">
     <h1>Covid19 Tracker</h1>
     <GlobalCase/>
-    </>
+    </div>
   );
     
   
