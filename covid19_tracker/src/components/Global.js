@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-
 const GlobalCase =()=>{
     const [confirmed, setConfirmed]= useState([]);
     const [recovered, setRecovered]= useState([]);
@@ -17,8 +16,10 @@ useEffect(() => {
     });   
 }, []);
 
+
 return (
     <>
+    
     <h3>Jumlah Kasus Covid-19 di Seluruh Dunia</h3>
    <div className="Adjust"> 
    <div className="Card">
