@@ -1,6 +1,5 @@
 //import React, { Component, useEffect, useState } from 'react';
 import "./App.css";
-//import axios from 'axios';
 import GlobalCase from './components/Global'
 import IndoCase from './components/Indonesia';  
 import Prov from './components/Provinsi';
@@ -12,7 +11,7 @@ const App = ()=> {
     <Router>
     <div className="App" >
       <nav>
-      <h1>Covid19 Tracker</h1>
+      <h1 align='center'>Covid-19 Tracker</h1>
       <ul>
         <Link to="/">
         <li>Global</li>

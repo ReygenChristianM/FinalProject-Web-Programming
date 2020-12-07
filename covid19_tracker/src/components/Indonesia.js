@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import NumberFormat from 'react-number-format';
+//import NumberFormat from 'react-number-format';
 
 const IndoCase =()=>{
     const [confirmed, setConfirmed]= useState([]);
@@ -19,7 +19,7 @@ useEffect(() => {
 
 return (
     <>
-    <h3>Jumlah Kasus Covid19 di Indonesia</h3>
+    <h3>Jumlah Kasus Covid-19 di Indonesia</h3>
    <div className="Adjust"> 
    <div className="Card">
     <label style={{color: "blue"}}>Positif</label>
